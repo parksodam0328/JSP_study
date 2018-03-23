@@ -59,28 +59,27 @@ function check(){
 </script>
 </head>
 <body>
-<form name="form1">
+<form name="form1" action="formProc.jsp" method="post">
 
-이름 : <input type="text" name="name" size=11>
+이름 : <input type="text" name="name">
 <br>
-ID : <input type="text" name="id" size=11>
+ID : <input type="text" name="id">
 <br>
-PW : <input type="password" name="pw" size=11>
+PW : <input type="password" name="pw">
 <br>
-성별 : 남 <input type="radio" name="gender" value="남"> 여 <input type="radio" name="gender" value="여">
+성별 : 남 <input type="radio" name="gen" value="M"> 여 <input type="radio" name="gen" value="F">
 <br>
-메일수신여부 : 공지 메일 <input type="checkbox" name="mail" value="notice">
- 광고메일 <input type="checkbox" name="mail" value="ad"> 배송 확인 메일 <input type="checkbox" name="mail" value="delivery">
+메일수신여부 : 공지 메일 <input type="checkbox" name="inotice">
+ 광고메일 <input type="checkbox" name="contice"> 배송 확인 메일 <input type="checkbox" name="dnotice">
 <br>
 직업 : <select name="job">
-    <option value="">직업선택</option>
-    <option value="학생">학생</option>
-    <option value="회사원">회사원</option>
-    <option value="기타">기타</option>
+    <option>회사원</option>
+    <option>교사</option>
+    <option>학생</option>
 	</select>
 <br>
-<input type="button" value="확인" onclick="check()">
-<input type="button" value="취소" onclick="loginChk()">
+<input type="submit" value="확인">
+<input type="reset" value="취소">
 </form>
 <br><br>
 
