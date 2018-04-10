@@ -4,14 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>회원가입 폼</title>
+<title>Insert title here</title>
 </head>
 <body>
-<b>회원 가입</b>
-<br>
-이름 : <input type="text"> <br>
-비밀번호 : <input type="password"> <br>
-비밀번호 확인: <input type="password"> <br>
-<input type="button" value="회원가입">
+[학교 소개] | [고사 원안] | [방명록] | [우리들 세상]
 </body>
 </html>
