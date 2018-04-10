@@ -11,10 +11,11 @@
 <hr>
 학교 소개 입니다.
 <hr>
-<%@ include file="bottom.jsp" %>
-
 <%
 	String name="쏠라";
 %>
+<%@ include file="bottom.jsp" %>
+
+
 </body>
 </html>

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-내가 좋아하는 연예인은 <%=name %>
+내가 좋아하는 연예인은 <%= name %>
 개인보호 정책 | 찾아오시는 길 | Copyright
 </body>
 </html>
