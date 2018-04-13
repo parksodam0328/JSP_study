@@ -16,7 +16,10 @@ main.jsp 파일 입니다<br>
 <p>본문 처리</p>
 <p>============================액션태그를 이용한 include==============================</p>
 <br>
-<font style='font-size:30px:color:blue'></font>
+<font style='font-size:30px:color:blue'>
+<jsp:include page="intag.jsp"></jsp:include><br>
+<jsp:include page="intag1.jsp"><jsp:param value="Korea" name="irum"/></jsp:include>
+</font>
 <%@ include file="bottom.jsp" %>
 </body>
 </html>
