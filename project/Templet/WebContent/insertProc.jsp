@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>회원가입 폼</title>
 </head>
 <body>
-*좌측 메뉴 *<br>
- <a href="login.jsp">-로그인</a><br>
- <a href="board.jsp">-게시판</a><br>
- <a href="movie.jsp">-영화목록</a><br>
+<b>회원 가입</b>
+<br>
+이름 : <input type="text"> <br>
+비밀번호 : <input type="password"> <br>
+비밀번호 확인: <input type="password"> <br>
+<input type="button" value="회원가입">
 </body>
 </html>

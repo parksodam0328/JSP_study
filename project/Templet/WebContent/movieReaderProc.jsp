@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-*좌측 메뉴 *<br>
- <a href="login.jsp">-로그인</a><br>
- <a href="board.jsp">-게시판</a><br>
- <a href="movie.jsp">-영화목록</a><br>
+<%
+	String filename = request.getParameter("FILE_NAME");
+%>
+당신이 선택한 영화는 <%=filename %>
 </body>
 </html>

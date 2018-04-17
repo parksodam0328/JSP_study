@@ -4,26 +4,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>로그인 폼</title>
 </head>
 <body>
-<b>*******방명록*******</b><br>
-
-<table>
+<center>
+<form action="loginProc.jsp" method="post">
+<table border=1>
 	<tr>
-		<td>제목</td>
-		<td><input type="text" name="title" size=20></td>
+		<td>ID</td>
+		<td><input type="text" name="id"></td>
 	</tr>
 	<tr>
-		<td colspan=2>
-		<textarea rows="10" cols="40"></textarea>
-		</td>
+		<td>PW</td>
+		<td><input type="password" name="pw"></td>
 	</tr>
 	<tr>
-		<td colspan=2 align="right">
-		<input type="button" value="등록">
+		<td colspan="2" align="center">
+			<input type="submit" value="로그인">
+			<input type="reset" value="취소">
 		</td>
 	</tr>
 </table>
+</form>
+</center>
 </body>
 </html>

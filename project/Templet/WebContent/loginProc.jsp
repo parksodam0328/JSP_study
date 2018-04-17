@@ -7,6 +7,47 @@
 <title>Insert title here</title>
 </head>
 <body>
-loginProc.jsp
+<%
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");	
+	 
+	//out.println("ID = " + id);
+	//out.println("PW = " + id);
+%>
+
+<%-- 주석2
+<%
+	if(id.equals("choi")) {
+		
+		if(pw.equals("1234")) {
+			out.println("로그인 성공");
+		}
+		else {
+			out.println("다시 로그인 해주세요..");
+		}
+		
+	}
+	else {
+		out.println("회원가입 해주세용~~");
+	}
+%>
+ --%>
+<%
+	if(id.equals("choi")) {
+		
+		if(pw.equals("1234")) { %>
+		<jsp:forward page="loginOK.jsp"></jsp:forward>
+<%		}
+		else { %>
+		<jsp:forward page="login.jsp"></jsp:forward>
+	<%	}
+		
+	}
+	else { %>
+		<jsp:forward page="insert.jsp"></jsp:forward>
+<%	}
+%>
+
+
 </body>
 </html>

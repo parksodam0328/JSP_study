@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <jsp:forward page="templetTest.jsp">
-	<jsp:param name="CONTENTPAGE" value="loginForm.jsp"/>
+	<jsp:param name="CONTENTPAGE" value="movieReaderProc.jsp"/>
 </jsp:forward>

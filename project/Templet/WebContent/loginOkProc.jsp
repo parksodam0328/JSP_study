@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-*좌측 메뉴 *<br>
- <a href="login.jsp">-로그인</a><br>
- <a href="board.jsp">-게시판</a><br>
- <a href="movie.jsp">-영화목록</a><br>
+
+<% String id = request.getParameter("id");%>
+[로그인 성공]<br> 
+<%=id+"님 방문을 환영합니다." %>
 </body>
 </html>
