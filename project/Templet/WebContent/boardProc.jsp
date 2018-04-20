@@ -4,26 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>게시판 글쓰기 - 결과 화면</title>
 </head>
 <body>
-<b>*******방명록*******</b><br>
-
-<table>
-	<tr>
-		<td>제목</td>
-		<td><input type="text" name="title" size=20></td>
-	</tr>
-	<tr>
-		<td colspan=2>
-		<textarea rows="10" cols="40"></textarea>
-		</td>
-	</tr>
-	<tr>
-		<td colspan=2 align="right">
-		<input type="button" value="등록">
-		</td>
-	</tr>
-</table>
+<%
+	request.setCharacterEncoding("UTF-8"); //post 방식일 경우 기재 -> 한글 깨짐 방지
+	String name = request.getParameter("name");
+	String title = request.getParameter("title");
+	String content = request.getParameter("content");
+%>
+==========================파일 저장========================
 </body>
 </html>

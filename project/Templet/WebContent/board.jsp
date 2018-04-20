@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <jsp:forward page="templetTest.jsp">
-	<jsp:param name="CONTENTPAGE" value="boardProc.jsp"/>
+	<jsp:param name="CONTENTPAGE" value="boardForm.jsp"/>
 </jsp:forward>
