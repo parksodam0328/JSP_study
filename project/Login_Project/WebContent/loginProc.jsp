@@ -36,7 +36,7 @@
 	if(id.equals("choi")) {
 		
 		if(pw.equals("1234")) { %>
-		<jsp:forward page="loginOK.jsp"></jsp:forward>
+		<jsp:forward page="loginOK.jsp"></jsp:forward> 
 <%		}
 		else { %>
 		<jsp:forward page="loginForm.jsp"></jsp:forward>

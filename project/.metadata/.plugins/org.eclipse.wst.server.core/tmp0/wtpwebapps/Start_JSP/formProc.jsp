@@ -39,5 +39,6 @@ ID : <%=id %><br>
 	else return "받음";
 	}
 %>
+<%-- --%>
 </body>
 </html>

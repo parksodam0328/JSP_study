@@ -13,11 +13,12 @@
 
 <%
 	String str2 = "사랑해요 KEI~~~(지역 변수)";
-	out.println(str2); // 내장객체
+	out.println(str2);
+	//out.println("<br>");// 내장객체
 %>
 
-<%= str2 %>
-<%= getStr() %>
+<%= str2 %><br>
+<%= getStr() %><br>
 
 <%!
 	public String getStr(){
@@ -41,7 +42,7 @@
 	}
 %>
 
-id 변수의 내용 <%=id %><br>
+<br>id 변수의 내용 <%=id %><br>
 getStr() 호출 <%=getStr() %><br>
 str() 호출 <%=str() %><br>
 </body>
