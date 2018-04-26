@@ -18,7 +18,7 @@ main.jsp 파일 입니다<br>
 <br>
 <font style='font-size:30px:color:blue'>
 <jsp:include page="intag.jsp"></jsp:include><br>
-<jsp:include page="intag1.jsp"><jsp:param value="Korea" name="irum"/></jsp:include>
+<jsp:include page="intag1.jsp"><jsp:param value="Korea" name="irum"/></jsp:include> <!-- 포함하는 문서나 혹은 이동하는 문서에게 전달할 값이 있을 때 사용한다.-->
 </font>
 <%@ include file="bottom.jsp" %>
 </body>

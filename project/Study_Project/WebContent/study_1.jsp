@@ -1,7 +1,7 @@
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    errorPage="choi.jsp"%>
+    errorPage="choi.jsp"%> <!-- choi는 에러페이지로 지정되어있음(예외처리 되어있음) -> 에러 발생시 choi 페이지로 이동 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

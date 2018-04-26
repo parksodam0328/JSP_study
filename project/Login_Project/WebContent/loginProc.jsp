@@ -8,8 +8,8 @@
 </head>
 <body>
 <%
-	String id = request.getParameter("id");
-	String pw = request.getParameter("pw");	
+	String id = request.getParameter("id"); // id 값 받아오기
+	String pw = request.getParameter("pw");	// password 값 받아오기
 	 
 	//out.println("ID = " + id);
 	//out.println("PW = " + id);
@@ -36,15 +36,15 @@
 	if(id.equals("choi")) {
 		
 		if(pw.equals("1234")) { %>
-		<jsp:forward page="loginOK.jsp"></jsp:forward> 
+		<jsp:forward page="loginOK.jsp"></jsp:forward> <!-- jsp action 태그, 아이디와 비밀번호의 값이 같을 때 loginOk.jsp로 이동 --> 
 <%		}
 		else { %>
-		<jsp:forward page="loginForm.jsp"></jsp:forward>
+		<jsp:forward page="loginForm.jsp"></jsp:forward> <!-- jsp action 태그, 아이디는 같고 비밀번호의 틀릴 때 loginForm.jsp로 이동 --> 
 	<%	}
 		
 	}
 	else { %>
-		<jsp:forward page="insert.jsp"></jsp:forward>
+		<jsp:forward page="insert.jsp"></jsp:forward> <!-- jsp action 태그, 아이디, 비밀번호 모두 틀릴 때 insert.jsp로 이동 --> 
 <%	}
 %>
 

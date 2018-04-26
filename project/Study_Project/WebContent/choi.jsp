@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 에러페이지로 설정 -> 예외처리가 가능 -->
 죄송합니다. 빠른 시간 내에 복구하겠습니다.
 <b>에러 타입</b> <%= exception.getClass().getName() %>
 <b>에러 메세지</b> <%= exception.getMessage() %>

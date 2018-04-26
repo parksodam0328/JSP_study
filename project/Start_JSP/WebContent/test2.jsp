@@ -22,11 +22,13 @@
 
 <%!
 	public String getStr(){
+		String str = "hello!";
 		return "마마무 쏠라~~~";
 	}
 %>
 
 <% String str3 = "Server Page";%>
+<%-- <%=str%>은 오류 발생 -> str은 지역변수이기 때문에 getStr이 소멸됨과 동시에 같이 소멸된다 --%>
 
 <%! String str4 = "Java";  %>
 

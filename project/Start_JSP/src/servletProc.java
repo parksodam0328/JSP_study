@@ -57,7 +57,7 @@ public class servletProc extends HttpServlet {
 		
 		
 		
-		PrintWriter out = response.getWriter();
+		PrintWriter out = response.getWriter(); // html로 찍어주기
 		out.println("<html><head></head><body>");
 		out.println("이름 = "+name+"<br>");
 		out.println("아이디 = "+id+"<br>");

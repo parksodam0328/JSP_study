@@ -70,7 +70,7 @@ PW : <input type="password" name="pw">
 성별 : 남 <input type="radio" name="gen" value="M"> 여 <input type="radio" name="gen" value="F">
 <br>
 메일수신여부 : 공지 메일 <input type="checkbox" name="inotice">
- 광고메일 <input type="checkbox" name="contice"> 배송 확인 메일 <input type="checkbox" name="dnotice">
+ 광고메일 <input type="checkbox" name="cnotice"> 배송 확인 메일 <input type="checkbox" name="dnotice">
 <br>
 직업 : <select name="job">
     <option>회사원</option>
