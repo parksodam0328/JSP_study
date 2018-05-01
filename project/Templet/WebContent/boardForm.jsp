@@ -10,8 +10,8 @@
 <h2>글쓰기</h2>
 <form action="boardProc.jsp" method="post">
 	이름 : <input type="text" name="name"><br>
-	제목 : <input type="text" name="title" name="content"><br>
-	<textarea rows="5" cols="30"></textarea><br>
+	제목 : <input type="text" name="title"><br>
+	<textarea rows="5" cols="30" name="content"></textarea><br>
 	<input type="submit" value="저장">
 </form>
 
