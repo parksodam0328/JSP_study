@@ -26,7 +26,7 @@
 	
 	try{
 		String filePath = application.getRealPath("/WEB-INF/bbs/"+filename);
-		//out.println(filePath);
+		out.println(filePath);
 		writer = new PrintWriter(filePath);
 		
 		writer.printf("제목 : %s %n",title);
@@ -41,7 +41,7 @@
 		result="fail";
 	}
 	
-	response.sendRedirect("boardResult.jsp?choi="+result);//get방식으로 보냄
+	//response.sendRedirect("boardResult.jsp?choi="+result);//get방식으로 보냄
 %>
 
 ==========================파일 저장========================
