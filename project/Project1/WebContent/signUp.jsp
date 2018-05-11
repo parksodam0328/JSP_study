@@ -8,8 +8,7 @@
 </head>
 <body>
 <jsp:forward page="thesame.jsp">
-	<jsp:param name="CONTENTPAGE" value="content.jsp"/>
+	<jsp:param name="CONTENTPAGE" value="signUpForm.jsp"/>
 </jsp:forward>
-
 </body>
 </html>

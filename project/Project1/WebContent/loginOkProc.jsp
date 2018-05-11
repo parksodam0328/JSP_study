@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:forward page="thesame.jsp">
-	<jsp:param name="CONTENTPAGE" value="content.jsp"/>
-</jsp:forward>
-
+<%
+	request.setCharacterEncoding("utf-8");
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");	
+	 
+	out.println("ID = " + id);
+	out.println("PW = " + id);
+%>
 </body>
 </html>

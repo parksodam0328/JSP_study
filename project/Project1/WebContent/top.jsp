@@ -10,11 +10,12 @@
 <body>
 <header>
 <a href="main.jsp"><span id="boardMenu">HOME</span></a>
-<a href="company.jsp"><span id="boardMenu">BEST</span></a>
-<a href="product.jsp"><span id="boardMenu">NEW</span></a>
+<a href="bestseller.jsp"><span id="boardMenu">BEST SELLER</span></a>
+<a href="product.jsp"><span id="boardMenu">NEW PRODUCTS</span></a>
 <a href="recipe.jsp"><span id="boardMenu">EVENT</span></a>
-<a href="recipe.jsp"><span id="boardMenu">BRAND</span></a>
+<a href="signUp.jsp"><span id="boardMenu">회원가입</span></a>
 </header>
+
 <script src="main.js"></script>
 </body>
 </html>

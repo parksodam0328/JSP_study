@@ -41,7 +41,7 @@
 		result="fail";
 	}
 	
-	//response.sendRedirect("boardResult.jsp?choi="+result);//get방식으로 보냄
+	response.sendRedirect("boardResult.jsp?choi="+result);//get방식으로 보냄
 %>
 
 ==========================파일 저장========================
