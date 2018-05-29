@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <div id="container">
 	<div class="align_center">
 	<center><span style="color:#ffcc00; font-size:40px;font-weight:900;">Login</span></center>
-	<form method="post" action="loginOkProc.jsp">
+	<form method="post" action="loginProc.jsp">
 	<input type="text" name="id" placeholder="id"><br>
 	<input type="password" name="pw" placeholder="password"><br>
 	<input type="submit" value="로그인"><br>

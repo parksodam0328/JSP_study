@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>회원가입</title>
 </head>
 <body>
 <%
@@ -35,7 +35,7 @@
 		out.println("오류발생");
 		result="fail";
 	}
-	//response.sendRedirect("main.jsp?choi");//get방식으로 보냄
+	response.sendRedirect("signUpOk.jsp?result="+userId);//get방식으로 보냄
 %>
 </body>
 </html>
