@@ -2,7 +2,7 @@
 <?metadataRepository version='1.1.0'?>
 <repository name='update site: http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/updates/bluemixAdapter/oxygen/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1527548672465'/>
+    <property name='p2.timestamp' value='1528066326572'/>
     <property name='site.checksum' value='0'/>
   </properties>
 </repository>

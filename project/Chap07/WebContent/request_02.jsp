@@ -24,5 +24,17 @@
 	}
 	
 %>
+
+<h2>헤더의 정보 표시</h2>
+
+<%
+	while(em.hasMoreElements()){
+		headerName = em.nextElement();
+		out.println(request.getParameter(headerName));
+		headerValue = request.getHeader(headerName);
+		out.println("<b><font color=red>"+headerName+"</font></b> : "+ headerValue+"<br>");
+	}
+
+%>
 </body>
 </html>
