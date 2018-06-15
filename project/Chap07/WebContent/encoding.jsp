@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,16 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-현재 페이지는 a.jsp 입니다.
-
 <%
-	response.sendRedirect("b.jsp");
-%>
-리다이렉트 이후 입니다.
+	String name ="최규정";
+	String encodingName = URLEncoder.encode(name,"UTF-8");
+	response.sendRedirect("index.jsp?name="+encodingName);
 
-
-<%
-	application.setAttribute("age", 23);
 %>
 </body>
 </html>

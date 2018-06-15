@@ -7,16 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-현재 페이지는 a.jsp 입니다.
-
-<%
-	response.sendRedirect("b.jsp");
-%>
-리다이렉트 이후 입니다.
-
-
-<%
-	application.setAttribute("age", 23);
-%>
+* 회원가입 창 *
 </body>
 </html>

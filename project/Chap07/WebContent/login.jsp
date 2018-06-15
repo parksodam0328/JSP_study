@@ -7,16 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-현재 페이지는 a.jsp 입니다.
-
 <%
-	response.sendRedirect("b.jsp");
-%>
-리다이렉트 이후 입니다.
-
-
-<%
-	application.setAttribute("age", 23);
+	request.setCharacterEncoding("UTF-8");
+	String id = request.getParameter("id");
+	if(id.equals("choi")){
+	session.setAttribute("id", id);
+	
+		response.sendRedirect("index.jsp?name="+id);
+	}else{
+		response.sendRedirect("insert.jsp");
+	}
 %>
 </body>
 </html>
