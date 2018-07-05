@@ -13,62 +13,54 @@
 <title>쇼핑</title>
 </head>
 <body>
+
 <%
+	String send = request.getParameter("send");
 	String[] product = request.getParameterValues("product");
 	String id = (String)session.getAttribute("login");
 	String filename = id+".txt";
-	String line="";
-	String read="";
-	String result="";
-	String delete="";
    	String filePath = application.getRealPath("/WEB-INF/shopping/"+filename);
-   	int i=0;
     try {
-    	//파일생성
-    	File theFile = new File(filePath);
-    	PrintWriter writer = null;
-   		BufferedWriter bufferW = null;
-   	   	FileReader theFileReader = new FileReader(theFile); //파일 읽기
-   	   	BufferedReader bufferR=new BufferedReader(theFileReader);
-
-   		bufferW = new BufferedWriter(new FileWriter(filePath,true)); // 파일 내용 계속 추가
-   		writer = new PrintWriter(bufferW,true); 
-   		
-   		while((read=bufferR.readLine())!=null) {
-   			line+=bufferR.readLine();
-   			if(read.contains(product[i])) {
-   				delete += bufferR.readLine();
-   				i++;
-   		       }
-   		}
-   		while((read=bufferR.readLine())!=null) {
-   			result+=bufferR.readLine();
-   			if(read.contains(product[i])) {
-   				delete += bufferR.readLine();
-   				i++;
-   		       }
-   		}
-   		bufferW.write(result);
-   		bufferW.write("\n");
+    	File file = new File(filePath);
+    	FileReader fileReader = new FileReader(file);
+    	BufferedReader buffedReader = new BufferedReader(fileReader);
+    	String str="";
+    	String delete ="";
+    	String[] userInfor={};
+    	PrintWriter writer=null;
+    	BufferedWriter bufferW = null;
+    	while((str = buffedReader.readLine())!=null){
+    		userInfor = str.split("/"); // 유저의 아이디와 비밀번호는 공백으로 구분
+    		if(send.equals("삭제")){
+    	    	for(int i=0;i<product.length;i++){
+    	    		if(!product[i].equals(userInfor[1])){
+    	    				delete = product[i];
+    	    				continue;
+    	    			}
+    	    		}
+    	    	bufferW = new BufferedWriter(new FileWriter(filePath)); // 파일 내용 계속 추가
+    	    	writer = new PrintWriter(bufferW); 
+	    		writer.printf("%s/",userInfor[0]);
+	    		writer.printf("%s/",userInfor[1]);
+	    		writer.printf("%s/",userInfor[2]);
+	    		writer.printf("%s/",userInfor[3]);
+	    		writer.printf("%s%n",userInfor[4]);
+    	    	%>
+	    		<% 
+    	    	}
+    		else if(send.equals("결제")){
+    			for(int i=0;i<product.length;i++){
+    			String total[] = userInfor[4].split("원");
+    			out.print(total[i]);
+    		}
+    		}
+    	
+    }
     }catch(Exception e){
     	out.println("오류발생");
     }
-	/* for(String pro : product){
-		out.print(pro);
-	} */
-/* if(request.getParameter("calculation").compareTo("calculation")==0)
-{
- savetest = 1;
- caltest = 1;
-}
-else
-{
- savetest = 2;
- caltest = 2;
-} */
-
 
 %>
-<meta http-equiv="refresh" content="3;url=main.jsp?">
+<meta http-equiv="refresh" content="0;url=myPage.jsp">
 </body>
 </html>

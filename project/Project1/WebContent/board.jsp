@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <jsp:forward page="thesame.jsp">
-	<jsp:param name="CONTENTPAGE" value="boardOkProc.jsp"/>
+	<jsp:param name="CONTENTPAGE" value="boardForm.jsp"/>
 </jsp:forward>

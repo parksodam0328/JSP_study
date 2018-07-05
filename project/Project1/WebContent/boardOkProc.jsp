@@ -11,45 +11,73 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게시판</title>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div>
 <%
-	String title = request.getParameter("title");
-	out.print(title);
+	String id = (String)session.getAttribute("login");
+	if(id==null){
+%>
+<header>
+<a href="main.jsp"><span class="boardMenu">HOME</span></a>
+<a href="bestseller.jsp"><span class="boardMenu">BEST SELLER</span></a>
+<a href="product.jsp"><span class="boardMenu">NEW PRODUCTS</span></a>
+<a href="event.jsp"><span class="boardMenu">EVENT</span></a>
+<a href="signUp.jsp"><span class="boardMenu">회원가입</span></a>
+</header>
+<%}else{%>
+<header>
+<a href="main.jsp"><span class="boardMenu">HOME</span></a>
+<a href="bestseller.jsp"><span class="boardMenu">BEST SELLER</span></a>
+<a href="product.jsp"><span class="boardMenu">NEW PRODUCTS</span></a>
+<a href="event.jsp"><span class="boardMenu">EVENT</span></a>
+<a href="board.jsp"><span class="boardMenu">게시판</span></a>
+<a href="myPage.jsp"><span class="boardMenu">[<%=id %>]님</span></a>
+</header>
+<%} %>
+<%
 	try{
-		String filename = title+".txt";
-		String filePath = application.getRealPath("/WEB-INF/board/"+filename);
-		File theFile = new File(filePath);
-		FileReader theFileReader = new FileReader(theFile); //파일 읽기
-		BufferedReader theBufferedReader = new BufferedReader(theFileReader);
-		String[] board={};
-		String infor=""; // 파일의 내용 한 줄씩 읽어오기 위한 변수 선언
+		String filePath = application.getRealPath("/WEB-INF/board/");
+		File theDir = new File(filePath);
+		File[] filelist = theDir.listFiles();
+		String filename;
 		%>
 		<form action="boardDeleteProc.jsp">
+		<center>
+		<br><br>
 		<table cellpadding=5>
 		<tr>
 		<%
-		while((infor = theBufferedReader.readLine())!=null){
-			board = infor.split("/"); // 장바구니에 있는 정보를 /를 기준으로 구분%>
-			<td width=100><input type="checkbox" name="product" value="<%=board[0]%>"></td>
-			<td width=100><%=board[0]%></td>
-			</tr>
 		
-		<%
-		}%>
+		for(File tempFile : filelist) {
+			  if(tempFile.isFile()) {
+			  int index = tempFile.getName().indexOf("."); 
+			  filename = tempFile.getName().substring(0, index);%>
+			    <td style="border-bottom:1px solid #dcdac2;padding:0px 0px 0px 5px;" align=left width=30 height=50><input type="checkbox" name="board" value="<%=filename%>"></td>
+			    
+				<td onclick="window.open('boardContent.jsp?name=<%=filename %>','asdfo8or','scrollbars=yes,width=500,height=500,top=300,left=500');" style="border-bottom:1px solid #dcdac2;" width=800 height=50><span style="font-size:15px;"><%=filename%></span></td></tr><%
+			  }
+			}
+		%>
 		</table>
 		<br><br>
-		<input type="submit" name="send" value="삭제">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="send" value="글쓰기" onclick="window.open('boardForm.jsp?','asdfo8or','scrollbars=yes,width=700,height=800,top=300,left=500');">
-		
-		<%
-	}catch(Exception e){%>
-		<center><br><br><br><br>게시글을 없습니다<br><br><br><br>
-		<input type="submit" name="send" value="삭제">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="send" value="글쓰기" onclick="window.open('boardForm.jsp?','asdfo8or','scrollbars=yes,width=500,height=500,top=300,left=500');">
-		</center>
+		<input type="submit" value="삭제">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="send" value="글쓰기" onclick="window.open('boardForm.jsp','asdfo8or','scrollbars=yes,width=500,height=500,top=300,left=500');">
 		</form>
-	<%}
+		</center>
+		<%
+	}catch(Exception e){
+		e.toString();
+		
+	}
 
 %>
+<footer>
+		서울시 관악구 호암로 546 미림여자정보과학고등학교 3학년 6반 박소담<br>
+		개인정보보호 책임자 : 박소담<br>
+		parksodam0228@e-mirim.hs.kr Copyright (c) 2018 Mirim lnc. All rights reserved
+</footer>
+<script>
+</script>
+<script src="main.js"></script>
 </body>
 </html>

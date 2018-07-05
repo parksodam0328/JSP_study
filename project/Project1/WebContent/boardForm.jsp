@@ -8,8 +8,11 @@
 <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<center>
 
+<center>
+<div align="right" style="margin:10px 50px 0px 0px;">
+<a href="boardOkProc.jsp"><span>게시판 글보기</span></a>
+</div>
 <div id="container">
 	<div class="align_center">
 	<form action="boardProc.jsp" method="post">

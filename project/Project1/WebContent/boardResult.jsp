@@ -8,6 +8,7 @@
 </head>
 <body>
 <%
+	request.setCharacterEncoding("UTF-8"); //post 방식일 경우 기재 -> 한글 깨짐 방지;
 	String str = request.getParameter("result");
 	String title = request.getParameter("title");
 	if(str.equals("ok")){%>
@@ -15,7 +16,7 @@
 	}else{%>
 	<script>alert("게시물이 저장되지 않았습니다.");</script><%
 	}
-	pageContext.forward("boardOkProc.jsp");
+	response.sendRedirect("boardOkProc.jsp?title="+title);
 %>
 </body>
 </html>

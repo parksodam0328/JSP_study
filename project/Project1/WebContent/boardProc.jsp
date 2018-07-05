@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>게시판 글쓰기 - 결과 화면</title>
+<title>게시판</title>
 </head>
 <body>
 <%
@@ -30,7 +30,7 @@
 		
 		writer.printf("%s/",title);
 		writer.printf(content);
-		writer.printf("\n\n");
+		writer.printf("\n");
 		
 		writer.flush();
 		result="ok";
@@ -39,7 +39,8 @@
 		result="fail";
 	}
 	
-	pageContext.forward("boardResult.jsp");
+	response.sendRedirect("boardResult.jsp?result="+result+"&title="+title);
+	request.setAttribute("title",title);
 %>
 
 ==========================파일 저장========================

@@ -40,8 +40,9 @@ address 파라미터 = <%=request.getParameter("address") %><br>
 <b>request.getParameterMap() 메서드 사용</b><br>
 <%
 	Map paramMap = request.getParameterMap();
-	String nameParam[] = (String[])paramMap.get("name");
+	String nameParam[] = (String[])paramMap.get("pet");
 	out.print("name = "+nameParam[0]);
+	out.print("name = "+nameParam[1]);
 %>
 <br>
 <b>헤더 목록 출력</b><br>

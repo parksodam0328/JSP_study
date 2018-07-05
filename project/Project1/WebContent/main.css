@@ -107,3 +107,6 @@ input[type=button] {
 input[type=button]:hover {
     background-color: #ffcc22;
 }
+tr{
+	border-bottom:2px solid #ffcc00;
+}
