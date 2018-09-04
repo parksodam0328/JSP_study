@@ -11,12 +11,35 @@
 	request.setCharacterEncoding("UTF-8");
 	String name = request.getParameter("name");
 %>
+
 index 페이지
 <br>
-<%
-	String id = (String)session.getAttribute("id");
+<b><%= name %></b>님의 방문을 환영합니다.
 
-%>
-<b><%=name %></b> 님의 방문을 환영합니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

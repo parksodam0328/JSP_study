@@ -7,18 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<b>isAutoFlush() : </b><%=out.isAutoFlush() %> <br>
-<b>getBufferSize() : </b><%=out.getBufferSize() %> <br>
-<b>getRemaining()</b> : <%=out.getRemaining() %> <br>
 
-안녕하세요. 즐거운 금요일입니다. <br>
-최지향을 만나러 갑니다.<br>
+<b>isAutoFlush() : </b> <%= out.isAutoFlush() %> <br>
+<b>getBufferSize() : </b> <%= out.getBufferSize() %> <br>
+<b>getRemaining : </b> <%= out.getRemaining() %> <br>
 
-<%out.flush(); %>
+안녕하세요? 즐거운 금요일입니다. <br>
+최지향을 만나러 갑니다. <br>
+
+<% out.flush();  %>
+
 clearBuffer() 실행 이후입니다.
-<%
-	
 
-%>
 </body>
 </html>

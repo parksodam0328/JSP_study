@@ -7,16 +7,39 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>입력받은 숫자가 10보다 작거나 같은지 비교</h2>
+<h2> 입력 받은 숫자가 10보다 작거나 같은지 비교</h2>
 
 <%
-	request.setCharacterEncoding("utf-8"); //post 방식일 경우 습관적으로 utf-8 기입
-	String num = request.getParameter("num");
-	int number = Integer.parseInt(num);
-	if(number<=10){ %>
+	request.setCharacterEncoding("UTF-8");
+	String num = request.getParameter("num"); //num = "5"
+	int number = Integer.parseInt(num);  //"5" => 5
 	
-		입력받은 숫자는 <%= number %>
-	<%}
-	%>
+	
+	if(number<=10) { %>
+		
+		입력받은 숫자는 <%= number %> 입니다.
+		
+				
+<% 	}
+
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

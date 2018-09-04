@@ -10,52 +10,74 @@
 <body>
 
 <%
-request.setCharacterEncoding("utf-8");
 	String name = request.getParameter("name");
 	String value = request.getParameter("value");
 	
-	//out.println(name+" : "+value);
+	//out.println(name + " : " + value);
 	
-	if(name!=null && value!=null){
+	if(name!=null && value !=null) {
 		application.setAttribute(name, value);
 	}
-	
 %>
-
 <br>
-
-<b>application 湲곕낯 媛�泥댁�� ���� 蹂닿린</b>
+<b> application 기본 객체의 속성 보기 </b>
 <br>
 <%
 	Enumeration para = application.getAttributeNames();
-	while(para.hasMoreElements()){
+	while(para.hasMoreElements()) {
 		String key = (String)para.nextElement();
 		Object value1 = application.getAttribute(key);
 		
-		out.println("<font color=red>" + key + "</font> : " + value1 + "<br>");
-		
+		out.println("<font color=red>" + key + "</font>" + " : " + value1 + "<br>");
 	}
-	
+		
+
 %>
 
 <br>
-
 <pre>
-	*�� �댄��由ъ��댁���� �� 媛��� ����(scope)瑜� 媛�����.
-	- PAGE ���� : ������ JSP ���댁�瑜� 泥�由ы�� �� �ъ�⑸���� ����, pageContext ��洹�
-	- REQUEST ���� : ������ HTTP ��泥��� 泥�由ы�� �� �ъ�⑸���� ����, request ��洹�
-	- SESSION ���� : ������ �� 釉��쇱�곗���� 愿��⑤�� ����, session ��洹�
-	- APPLICATION : ������ �� �댄��由ъ��댁��怨� 愿��⑤�� ����, application ��洹�
-	
-	* 湲곕낯 媛�泥대�濡� ���깆�� ����
-	- pageContext : PAGE ������ �대��. ������ JSP ���댁� �댁���� 怨듭���� 媛��� ����
-	- request  : REQUEST ������ �대��. �� 踰��� ��泥��� 泥�由ы������ �ъ�⑸���� 紐⑤�� JSP ���댁����� 怨듭���� 媛��� ���ν����.
-		二쇰� ������ ��泥��� 泥�由ы������ �ъ�⑸���� JSP ���댁� �ъ�댁���� ��蹂대�� ���ы��湲� ���� �ъ�⑺����. 
-	- session : SESSION ������ �대��. �� �ъ�⑹��(釉��쇱�곗��)�� 愿��⑤�� ��蹂대�� JSP ���댁��ㅼ�� 怨듭����湲� ���댁�� �ъ�⑸����.
-		二쇰� �ъ�⑹���� 濡�洹몄�� ��蹂댁�� 媛��� 寃��ㅼ�� ���ν����. 
-	- application : APPLICATION ������ �대��. 紐⑤�� �ъ�⑹���� 愿��⑦�댁�� ��蹂대�� ���ν����. 
-		���� �����곕━ 寃쎈��� 媛��� �� �댄��由ъ��댁���� �ㅼ�� ��蹂대�� 二쇰� ���ν����.
+ * 웹 어필리케이션은 네 개의 영역(scope)을 갖는다.
+  - PAGE 영역 : 하나의 JSP 페이지를 처리할 때 사용되는 영역, pageContext 접근
+  - REQUEST 영역 : 하나의 HTTP 요청을 처리할 때 사용되는 영역, request 접근
+  - SESSION 영역 : 하나의 웹 브라우저와 관련된 영역, session 접근
+  - APPLICATION : 하나의 웹 어플리케이션과 관련된 영역, application 접근
+ 
+ * 기본 객체별로 속성의 활용
+  - pageContext : PAGE 영역을 담당. 하나의 JSP 페이지 내에서 공유될 값을 저장 
+  - request : REQUEST 영역을 담당. 한 번의 요청을 처리하는데 사용되는 모든 JSP 페이지에서 공유될
+              값을 저장한다. 주로 하나의 요청을 처리하는데 사용되는 JSP 페이지 사이에서 정보를 전달하기 위해 사용한다.
+  - session : SESSION 영역을 담당. 한 사용자(브라우저)와 관련된 정보를 JSP 페이지들이 공유하기 위해서
+              사용된다. 주로 사용자의 로그인 정보와 같은 것들을 저장한다.
+  - application : APPLICATION 영역을 담당. 모든 사용자와 관련해서 정보를 저장한다.
+    	임시 디렉터리 경로와 같은 웹 어플리케이션의 설정 정보를 주로 저장한다.
+
+
 </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>

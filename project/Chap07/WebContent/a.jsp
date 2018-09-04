@@ -7,16 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-현재 페이지는 a.jsp 입니다.
+a.jsp <br>
+
+<form method="post" action="b.jsp">
+id : <input type="text" name="id"> <br>
+pw : <input type="password" name="pw"> <br>
+<input type="submit" value="전송">
+
+</form>
 
 <%
-	response.sendRedirect("b.jsp");
-%>
-리다이렉트 이후 입니다.
-
-
-<%
-	application.setAttribute("age", 23);
+	application.setAttribute("age", 23); //aplication은 Chap07내에서 공유가능!
 %>
 </body>
 </html>

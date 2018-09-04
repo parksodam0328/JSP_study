@@ -15,5 +15,8 @@
 	HttpSession session1 = pageContext.getSession();
 	
 %>
+
+<%= application.getAttribute("age") %>
+
 </body>
 </html>

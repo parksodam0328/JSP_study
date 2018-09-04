@@ -10,13 +10,21 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
-	if(id.equals("choi")){
-	session.setAttribute("id", id);
+
 	
+	if(id.equals("choi")) {
+		//out.println("로그인 성공");
 		response.sendRedirect("index.jsp?name="+id);
-	}else{
+	}
+	else {
+		//out.println("로그인 실패");
 		response.sendRedirect("insert.jsp");
 	}
+
+
 %>
+
+
+
 </body>
 </html>

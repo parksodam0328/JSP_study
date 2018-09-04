@@ -7,17 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>규정쌤이 좋아하는 연예인은></h2>
+
+<h2>규정샘이 좋아하는 연예인은?</h2>
 
 <form method="post" action="healing-8.jsp">
 	<input type="radio" name="idol" value="1">설현<br>
 	<input type="radio" name="idol" value="2">경리<br>
-	<input type="radio" name="idol" value="3">쏠라<br>
-	<input type="radio" name="idol" value="4">은하<br>
+	<input type="radio" name="idol" value="3">쏠라<br>		
+	<input type="radio" name="idol" value="4">은하<br>	
 	<input type="radio" name="idol" value="5">모모<br>
 	<input type="submit" value="입력완료">
-
-
 </form>
+
+
+
 </body>
 </html>

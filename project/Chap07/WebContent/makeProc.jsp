@@ -11,50 +11,91 @@
 <body>
 <%
 	request.setCharacterEncoding("UTF-8");
+
 %>
-<b>requset.getParameter() 메서드 사용</b><br>
 
-name 파라미터 = <%=request.getParameter("name") %><br>
-address 파라미터 = <%=request.getParameter("address") %><br>
+<b>request.getParameter() 메서드 사용</b>
+<br>
+name 파라미터 = <%= request.getParameter("name") %> <br>
+address 파라미터 = <%= request.getParameter("address") %> <br>
+<br>
 
-<b>requset.getParameterValues() 메서드 사용</b><br>
-<% 
+<b>request.getParameterValues() 메서드 사용</b>
+<br>
+<%
 	String values[] = request.getParameterValues("pet");
-	if(values!=null){
-	for(int i=0;i<values.length;i++){
-		out.print(values[i]+"\n");
+	
+	if(values!=null) {
+		for(int i=0; i<values.length; i++) {
+			out.println(values[i]);
+		}
 	}
-	}
-%><br>
-<b>request.getParameterNames() 메서드 사용</b><br>
-<%
+%>
+<br>
+<b>request.getParameterNames() 메서드 사용 </b>
+<br>
 
+<%
 	Enumeration param = request.getParameterNames();
-	while(param.hasMoreElements()){
+	while(param.hasMoreElements()) {
 		String name = (String)param.nextElement();
-		out.print(name);
+		out.println(name);
+		//String value = request.getParameter(name);
+		//out.println(value);
 	}
 %>
 
 <br>
-<b>request.getParameterMap() 메서드 사용</b><br>
+<b>request.getParameterMap() 메서드 사용</b>
+<br>
 <%
-	Map paramMap = request.getParameterMap();
-	String nameParam[] = (String[])paramMap.get("pet");
-	out.print("name = "+nameParam[0]);
-	out.print("name = "+nameParam[1]);
+	Map paramMap= request.getParameterMap();
+	String petPram[] = (String[])paramMap.get("pet");
+	for(int i=0;i<petPram.length;i++)
+	out.println("pet = " + petPram[i]);
 %>
 <br>
-<b>헤더 목록 출력</b><br>
+<b>헤더 목록 출력</b>
+<br>
 <%
 	Enumeration header = request.getHeaderNames();
-	while(header.hasMoreElements()){
+	while(header.hasMoreElements()) {
 		String key = (String)header.nextElement();
-		String value = request.getHeader(key);%>
-		<font color=red><%=key %></font> =  <%=value %><br>
-	
-	<%}
+		String value = request.getHeader(key); %>
+ 		<font color=red><%= key %></font> = <%= value %> <br>
+<%	} //while
 
 %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

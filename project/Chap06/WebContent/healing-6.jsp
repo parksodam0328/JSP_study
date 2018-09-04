@@ -7,28 +7,49 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
-	request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("UTF-8");
 	String name = request.getParameter("name");
 	String twice = request.getParameter("twice");
 	String love = "";
-	if(twice.equals("나연")){
-		love="나연";
-	}else if(twice.equals("정연")){
-		love="정연";
-	}else if(twice.equals("모모")){
-		love="모모";
-	}else if(twice.equals("사나")){
-		love="사나";
-	}else if(twice.equals("지효")){
-		love="지효";
-	}else if(twice.equals("쯔위")){
-		love="쯔위";
-	}else{
-		love="기타멤버";
-	}
 	
-	out.println(name+"님은 트와이스의 "+love+"를 좋아합니다.");
+	if(twice.equals("나연")) {
+		love = "나연";	
+	}
+	else if(twice.equals("정연")) {
+		love = "정연";		
+	}
+	else if(twice.equals("모모")) {
+		love = "모모";		
+	}		
+	else if(twice.equals("사나")) {
+		love = "사나";		
+	}
+	else if(twice.equals("지효")) {
+		love = "지효";		
+	}
+	else if(twice.equals("쯔위")) {
+		love = "쯔위";		
+	}		
+	else {
+		love = "기타 멤버";
+	}
+
+	out.println(name + "님은 트와이스의 " + love + "를 좋아합니다.");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 %>
+
+
 </body>
 </html>

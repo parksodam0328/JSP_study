@@ -8,14 +8,17 @@
 </head>
 <body>
 
-	getProtocol() : <%=request.getProtocol()%><br>
-	getServerName() : <%=request.getServerName()%><br>
-	getMethod() : <%=request.getMethod()%><br>
-	getRequestURI() : <%=request.getRequestURI()%><br>
-	getRequestURL() : <%=request.getRequestURL()%><br>
-	getRemoteHost() : <%=request.getRemoteHost()%><br>
-	getRemoteAddr() : <%=request.getRemoteAddr()%><br>
-	getServerPort() : <%=request.getServerPort()%><br>
-	getContextPath() : <%=request.getContextPath()%><br>
+
+getProtocol() : <%= request.getProtocol() %> <br>
+getSeverName() : <%= request.getServerName() %> <br>
+getMethod() : <%= request.getMethod() %> <br>
+getRequestURI : <%= request.getRequestURI() %> <br>
+getRequestURL : <%= request.getRequestURL() %> <br>
+getRemoteHost : <%= request.getRemoteHost() %> <br>
+getRemoteAddr : <%= request.getRemoteAddr() %> <br>
+getServerPort : <%= request.getServerPort() %> <br>
+
+getContextPath() : <%= request.getContextPath() %> <br>
+
 </body>
 </html>

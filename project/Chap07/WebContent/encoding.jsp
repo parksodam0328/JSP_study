@@ -8,11 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	String name ="최규정";
-	String encodingName = URLEncoder.encode(name,"UTF-8");
-	response.sendRedirect("index.jsp?name="+encodingName);
 
+<%
+	String name = "최규정";
+	String encodingName = URLEncoder.encode(name, "UTF-8");
+	response.sendRedirect("index.jsp?name="+encodingName);
 %>
+
+
 </body>
 </html>

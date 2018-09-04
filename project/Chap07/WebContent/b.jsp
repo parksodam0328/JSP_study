@@ -7,7 +7,44 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 현재 페이지는 b.jsp 입니다.
-getServerInfo() : <%= application.getServerInfo() %><br>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");
+
+%>
+<br>
+
+id : <%= id %> <br>
+pw : <%= pw %> <br>
+
+<jsp:forward page="c.jsp"></jsp:forward> <!-- forward는 url은 바뀌지 않고 내용만 바뀜 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

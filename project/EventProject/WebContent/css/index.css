@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+html, body { height:100%; margin:0; padding:0; 
+font-family: 'Jeju Hallasan', serif;}
+#content { min-height:100%; margin:0; width:100%;}
+* html #content { height:100%;}
+#box { height:100%; padding:0; width:100%;}
+
+a{
+	color:#585858;
+	text-decoration:none;
+}
+a:hover{
+	color:black;
+}

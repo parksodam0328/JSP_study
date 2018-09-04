@@ -1,0 +1,108 @@
+
+input[type=text]{
+	width: 80%;
+    padding: 12px 10px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:#FAF9F9;
+}
+
+input[type=password]{
+	width: 80%;
+    padding: 12px 10px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:#FAF9F9;
+    
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {background-color: red;}
+    to {background-color: #FA58AC;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: #FA58AC;}
+}
+input[type=submit]{
+	width: 80%;
+    padding: 8px 10px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:#FA58AC;
+    color:#fff;
+    
+}
+input[type=submit]:hover{
+	width: 80%;
+    padding: 8px 10px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:#FA58AC;
+    color:#fff;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+
+#logo:link{
+	color: #fff; text-decoration: none;
+}
+#logo:visited{
+	color: #fff; text-decoration: none;
+}
+#logo:hover{
+	color: #fff; text-decoration: none;
+}
+#logo:active{
+	color: #fff; text-decoration: none;
+}
+
+#song a:link{
+	color: black; text-decoration: none;
+}
+#song a:visited{
+	color: black; text-decoration: none;
+}
+#song a:hover{
+	color: black; text-decoration: none;
+}
+#song a:active{
+	color: black; text-decoration: none;
+}
+
+#word a:link{
+	color: #FA58AC; text-decoration: none;
+}
+#word a:visited{
+	color: #FA58AC; text-decoration: none;
+}
+#word a:hover{
+	color: #FA58AC; text-decoration: none;
+}
+#word a:active{
+	color: #FA58AC; text-decoration: none;
+}
+a:link{
+	text-decoration: none; color:#fff;
+}
+a:visited{
+	 text-decoration: none;color:#fff;
+}
+a:hover{
+	text-decoration: none;color:#fff;
+}
+a:active{
+	text-decoration: none;color:#fff;
+}
