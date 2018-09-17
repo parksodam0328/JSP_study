@@ -3,6 +3,7 @@
 ch.qos.logback.classic,1.0.7.v20121108-1250,plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar,4,false
 ch.qos.logback.core,1.0.7.v20121108-1250,plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar,4,false
 ch.qos.logback.slf4j,1.0.7.v201505121915,plugins/ch.qos.logback.slf4j_1.0.7.v201505121915.jar,4,false
+com.github.eclipsecolortheme,1.0.0.201410260308,plugins/com.github.eclipsecolortheme_1.0.0.201410260308.jar,4,false
 com.google.gson,2.7.0.v20170129-0911,plugins/com.google.gson_2.7.0.v20170129-0911.jar,4,false
 com.google.guava,21.0.0.v20170206-1425,plugins/com.google.guava_21.0.0.v20170206-1425.jar,4,false
 com.google.guava,15.0.0.v201403281430,plugins/com.google.guava_15.0.0.v201403281430.jar,4,false
