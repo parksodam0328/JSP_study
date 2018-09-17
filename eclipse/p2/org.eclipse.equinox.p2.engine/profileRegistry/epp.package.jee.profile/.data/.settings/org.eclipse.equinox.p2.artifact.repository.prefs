@@ -68,6 +68,15 @@ repositories/http\:__download.oracle.com_otn_software_oepe_12.2.1.7_oxygen_repos
 repositories/http\:__download.oracle.com_otn_software_oepe_12.2.1.8_oxygen_repository_dependencies/enabled=true
 repositories/http\:__download.oracle.com_otn_software_oepe_12.2.1.8_oxygen_repository_dependencies/isSystem=false
 repositories/http\:__download.oracle.com_otn_software_oepe_12.2.1.8_oxygen_repository_dependencies/uri=http\://download.oracle.com/otn_software/oepe/12.2.1.8/oxygen/repository/dependencies/
+repositories/http\:__eclipse-color-theme.github.com_update/description=
+repositories/http\:__eclipse-color-theme.github.com_update/enabled=true
+repositories/http\:__eclipse-color-theme.github.com_update/isSystem=false
+repositories/http\:__eclipse-color-theme.github.com_update/name=com.github.eclipsecolortheme.updatesite
+repositories/http\:__eclipse-color-theme.github.com_update/provider=
+repositories/http\:__eclipse-color-theme.github.com_update/suffix=artifacts.xml
+repositories/http\:__eclipse-color-theme.github.com_update/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/http\:__eclipse-color-theme.github.com_update/uri=http\://eclipse-color-theme.github.com/update
+repositories/http\:__eclipse-color-theme.github.com_update/version=1.0.0
 repositories/http\:__jope.ow2.org_update_jope/enabled=false
 repositories/http\:__jope.ow2.org_update_jope/isSystem=false
 repositories/http\:__jope.ow2.org_update_jope/uri=http\://jope.ow2.org/update/jope/

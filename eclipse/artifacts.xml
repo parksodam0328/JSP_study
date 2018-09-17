@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
-<repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+<repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.system' value='true'/>
-    <property name='p2.timestamp' value='1513588104862'/>
+    <property name='p2.timestamp' value='1536622873993'/>
   </properties>
   <mappings size='3'>
     <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='1191'>
+  <artifacts size='1193'>
     <artifact classifier='osgi.bundle' id='org.eclipse.datatools.connectivity.dbdefinition.genericJDBC' version='1.2.1.201712071719'>
       <properties size='1'>
         <property name='download.size' value='11388'/>
@@ -4247,6 +4247,14 @@
         <property name='download.size' value='258075'/>
       </properties>
     </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.github.eclipsecolortheme.feature' version='1.0.0.201410260308'>
+      <properties size='1'>
+        <property name='download.size' value='6094'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='com.google.inject.multibindings' version='3.0.0.v201402270930'>
       <properties size='1'>
         <property name='download.size' value='42494'/>
@@ -5023,6 +5031,11 @@
     <artifact classifier='osgi.bundle' id='org.eclipse.wst.jsdt.chromium.debug' version='0.4.0.v201605131737'>
       <properties size='1'>
         <property name='download.size' value='13184'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.github.eclipsecolortheme' version='1.0.0.201410260308'>
+      <properties size='1'>
+        <property name='download.size' value='110222'/>
       </properties>
     </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ecf.core.feature' version='1.4.0.v20170516-2248'>
