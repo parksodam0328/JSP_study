@@ -12,10 +12,13 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Travelstagram"/>
+			<item value="D:\JSP_Project04"/>
 			<item value="D:\JSP_PROJECT1"/>
 			<item value="D:\MirimGuideBook"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="D:\JSP_Project04\seat_location\WebContent\main.jsp"/>
 			<item value=""/>
 		</list>
 	</section>
